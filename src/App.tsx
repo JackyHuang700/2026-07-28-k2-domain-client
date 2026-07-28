@@ -10,7 +10,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#F7F5F0]">
-      {JSON.stringify(currentPage)}
       {currentPage === "purchase" && (
         <DomainBuy setCurrentPage={setCurrentPage} />
       )}
