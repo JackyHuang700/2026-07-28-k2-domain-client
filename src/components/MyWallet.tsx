@@ -15,9 +15,10 @@ import {
 
 interface MyWalletProps {
   setCurrentPage: (page: string) => void;
+  onLogout: () => void;
 }
 
-export default function MyWallet({ setCurrentPage }: MyWalletProps) {
+export default function MyWallet({ setCurrentPage, onLogout }: MyWalletProps) {
   // 模擬帳本明細資料 (完美對應您的第一張截圖)
   const ledgerData = [
     {
@@ -169,6 +170,7 @@ export default function MyWallet({ setCurrentPage }: MyWalletProps) {
               </div>
               <LogOut
                 size={16}
+                onClick={onLogout}
                 className="cursor-pointer hover:text-[#C05621] transition-colors"
               />
             </div>

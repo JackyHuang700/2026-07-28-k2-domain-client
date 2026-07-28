@@ -14,9 +14,10 @@ import {
 
 interface DomainBuyProps {
   setCurrentPage: (page: string) => void;
+  onLogout: () => void;
 }
 
-export default function DomainBuy({ setCurrentPage }: DomainBuyProps) {
+export default function DomainBuy({ setCurrentPage, onLogout }: DomainBuyProps) {
   return (
     <div className="h-screen w-screen flex items-center justify-center p-4 sm:p-6 bg-[#EBE9E4] text-[#2C2A29] font-sans">
       <div className="w-full h-full max-w-[1400px] rounded-2xl shadow-2xl flex overflow-hidden border border-[#E5E0D8] bg-white/75 backdrop-blur-md">

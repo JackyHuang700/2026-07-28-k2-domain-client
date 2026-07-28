@@ -12,9 +12,10 @@ import {
 
 interface MyOrdersProps {
   setCurrentPage: (page: string) => void;
+  onLogout: () => void;
 }
 
-export default function MyOrders({ setCurrentPage }: MyOrdersProps) {
+export default function MyOrders({ setCurrentPage, onLogout }: MyOrdersProps) {
   // 模擬訂單明細資料 (精準對應您的截圖)
   const orderData = [
     {
@@ -145,6 +146,7 @@ export default function MyOrders({ setCurrentPage }: MyOrdersProps) {
               </div>
               <LogOut
                 size={16}
+                onClick={onLogout}
                 className="cursor-pointer hover:text-[#C05621] transition-colors"
               />
             </div>

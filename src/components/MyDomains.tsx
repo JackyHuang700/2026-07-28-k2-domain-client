@@ -11,9 +11,10 @@ import {
 
 interface MyDomainsProps {
   setCurrentPage: (page: string) => void;
+  onLogout: () => void;
 }
 
-export default function MyDomains({ setCurrentPage }: MyDomainsProps) {
+export default function MyDomains({ setCurrentPage, onLogout }: MyDomainsProps) {
   const mockData = [
     {
       assetId: "DA178520435922300007M0000",
@@ -139,6 +140,7 @@ export default function MyDomains({ setCurrentPage }: MyDomainsProps) {
               </div>
               <LogOut
                 size={16}
+                onClick={onLogout}
                 className="cursor-pointer hover:text-[#C05621] transition-colors"
               />
             </div>
