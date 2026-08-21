@@ -3,8 +3,10 @@
         "./src/**/*"
     ],
     "compilerOptions": {
+        "skipLibCheck": true,
         "strict": true,
         "esModuleInterop": true,
+        "types": ["react", "react-dom"],
         "lib": [
             "dom",
             "es2015"

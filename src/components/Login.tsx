@@ -2,7 +2,11 @@ import { ArrowRight, KeyRound, LayoutGrid, Shield } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
 
-export default function Login({ onLogin }: { onLogin: () => void }) {
+type LoginProps = {
+	onLogin: () => void;
+};
+
+export default function Login({ onLogin }: LoginProps) {
 	const [username, setUsername] = useState("demo");
 	const [password, setPassword] = useState("demo");
 	const [error, setError] = useState("");
@@ -25,13 +29,6 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
 			<div className="w-full max-w-[1000px] min-h-[600px] rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden border border-[#E5E0D8] bg-white/75 backdrop-blur-md">
 				{/* 左側資訊欄 (對應截圖左側的文字介紹) */}
 				<div className="hidden md:flex flex-col w-1/2 bg-[#FAF8F5]/90 border-r border-[#E5E0D8] p-10 relative">
-					{/* macOS 視窗控制顆粒 */}
-					<div className="flex items-center space-x-2 mb-12">
-						<div className="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]"></div>
-						<div className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]"></div>
-						<div className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]"></div>
-					</div>
-
 					<div className="flex-1 flex flex-col justify-center">
 						<div className="text-xs font-bold text-[#8C877D] tracking-widest uppercase mb-3">
 							Customer Portal
